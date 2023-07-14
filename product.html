@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js scheme_default">
+
+<head>
+	<title> Johari Tea</title>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel='stylesheet' id='trx_addons-icons-css'
+		href='js/vendor/plugins/trx_addons/css/font-icons/css/trx_addons_icons-embedded.css' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='magnific-popup-css'
+		href='js/vendor/plugins/trx_addons/js/magnific/magnific-popup.min.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='trx_addons-css' href='js/vendor/plugins/trx_addons/css/trx_addons.css' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'
+		href='js/vendor/plugins/woocommerce/assets/css/prettyPhoto.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='woocommerce-layout-css'
+		href='js/vendor/plugins/woocommerce/assets/css/woocommerce-layout.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='woocommerce-smallscreen-css'
+		href='js/vendor/plugins/woocommerce/assets/css/woocommerce-smallscreen.css' type='text/css'
+		media='only screen and (max-width: 768px)' />
+	<link rel='stylesheet' id='woocommerce-general-css' href='js/vendor/plugins/woocommerce/assets/css/woocommerce.css'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='laon_wine_house-font-google_fonts-css'
+		href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic%7CLato:400,700&amp;subset=latin,latin-ext'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='laon_wine_house-fontello-css' href='css/fontello/css/fontello-embedded.css'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='laon_wine_house-main-css' href='css/style.min.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='laon_wine_house-animation-css' href='css/animation.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='laon_wine_house-colors-css' href='css/__colors.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='laon_wine_house-styles-css' href='css/__styles.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='laon_wine_house-custom-css' href='css/custom.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='laon_wine_house-responsive-css' href='css/responsive.min.css' type='text/css'
+		media='all' />
+</head>
+
+<body
+	class="single single-product postid-403 woocommerce woocommerce-page body_tag body_style_wide scheme_default blog_mode_shop  is_stream blog_style_excerpt sidebar_hide expand_content header_style_header-1 header_position_default header_title_on menu_style_top no_layout vc_responsive">
+
+	<!-- The Modal -->
+	<div id="buy-modal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+
+			<div class="page_content_wrap scheme_default">
+				<div class="wrap">
+					<div class="row">
+						<div class="wpb_column vc_column_container column-12_12">
+							<div class="vc_column-inner ">
+								<div id="order-detailsmodal" class="content">
+									<!-- /.sc_icons -->
+									<div style="margin-top: 4em; margin-bottom: 3em;"
+										class="sc_form sc_form_default sc_align_center">
+										<h2 class="sc_item_title sc_form_title">Place Order</h2>
+										<!-- <h5 class="sc_item_subtitle sc_form_subtitle">Fill the form below and our sales
+											team will get in touch.</h5> -->
+
+										<form class="sc_form_form sc_input_hover_underline" method="post"
+											id="order-details">
+											<div class="sc_form_details trx_addons_columns_wrap">
+												<div class="trx_addons_column-1_2"><label
+														class="sc_form_field sc_form_field_name required">
+														<span class="sc_form_field_wrap"><input required type="text"
+																name="name" id="order-name" aria-required="true"><span
+																class="sc_form_field_hover"><span
+																	class="sc_form_field_content"
+																	data-content="Name">Name</span></span></span></label>
+												</div>
+												<div class="trx_addons_column-1_2"><label
+														class="sc_form_field sc_form_field_email required">
+														<span class="sc_form_field_wrap"><input required
+																id="order-location" type="text" name="location"
+																aria-required="true"><span
+																class="sc_form_field_hover"><span
+																	class="sc_form_field_content"
+																	data-content="location">Location</span></span></span></label>
+												</div>
+												<div class="trx_addons_column-1_2"><label
+														class="sc_form_field sc_form_field_email required">
+														<span class="sc_form_field_wrap"><input type="text"
+																id="order-phonenumber" name="phonenumber"
+																aria-required="true" required><span
+																class="sc_form_field_hover"><span
+																	class="sc_form_field_content"
+																	data-content="phonenumber">Phone
+																	Number</span></span></span></label>
+												</div>
+											</div>
+											<!-- <h3 id="order_review_heading">Your order</h3> -->
+											<div class="order-wrapper">
+												<div id="order_review" class="woocommerce-checkout-review-order">
+													<table class="shop_table woocommerce-checkout-review-order-table">
+														<thead>
+															<tr>
+																<th class="product-name">Product</th>
+																<th class="product-total">Total Items</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="cart_item">
+																<td id="product-type-label" class="product-name">
+																</td>
+																<td class="product-total">
+																	<!-- <span class="woocommerce-Price-amount amount"><span
+																			class="woocommerce-Price-currencySymbol">$</span>595.00</span> -->
+																	<span class="woocommerce-Price-amount amount"><span
+																			class="woocommerce-Price-currencySymbol"
+																			id="product-quantity-label">
+
+																		</span></span>
+																</td>
+															</tr>
+														</tbody>
+														<!-- <tfoot>
+														<tr class="cart-subtotal">
+															<th>Subtotal</th>
+															<td><span class="woocommerce-Price-amount amount"><span
+																		class="woocommerce-Price-currencySymbol">$</span>595.00</span>
+															</td>
+														</tr>
+														<tr class="order-total">
+															<th>Total</th>
+															<td><strong><span class="woocommerce-Price-amount amount"><span
+																			class="woocommerce-Price-currencySymbol">$</span>595.00</span></strong>
+															</td>
+														</tr>
+													</tfoot> -->
+													</table>
+												</div>
+											</div>
+											<div class="order-btn" id="submit-order-btn"><button type="submit"><span
+														id="submit-order">Order</span><span id="submit-loading"
+														style="display: none;">Loading...</span></button>
+											</div>
+											<!-- <div class="trx_addons_message_box sc_form_result"></div> -->
+										</form>
+									</div>
+									<!-- /.sc_form -->
+								</div>
+
+								<div style="margin : 4em; display: none;" id="order-received"
+									class="sc_form sc_form_default sc_align_center">
+									<h4 class="sc_item_title sc_form_title">We have received your order. Our sales team
+										will be in touch soon</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- .entry-content -->
+					<!-- </.content> -->
+				</div>
+				<!-- </.content_wrap> -->
+			</div>
+		</div>
+
+	</div>
+
+	<div class="body_wrap">
+		<div class="page_wrap">
+
+			<header class="top_panel top_panel_style_1 without_bg_image scheme_default">
+				<a class="menu_mobile_button"></a>
+				<div class="top_panel_fixed_wrap"></div>
+				<div class="top_panel_navi						scheme_default">
+					<div class="menu_main_wrap clearfix">
+						<div class="content_wrap">
+							<a class="logo" href="index.html"><img src="images/joharilogo.png" class="logo_main"
+									alt="" /></a>
+
+							<nav class="menu_main_nav_area menu_hover_fade mt-0">
+								<ul id="menu_main" class="menu_main_nav">
+									<li class="menu-item"><a href="index.html"><span>Home</span></a>
+
+									</li>
+									<li class="menu-item"><a href="about-us.html"><span>Our
+												Story</span></a></li>
+									<li class="menu-item"><a class="nav-active-link" href="shop.html"><span>Treasure
+												Chest</span></a>
+									</li>
+									<li class="menu-item"><a href="galary.html"><span>Gallery</span></a></li>
+									<!-- <li class="menu-item"><a href="https://www.youtube.com/c/NairobiKitchen"
+											target="_blank"><span>Recipes</span>
+											<img class="external-link-icon" src="images/icons-external-link.png" /></a>
+									</li> -->
+									<li class="menu-item"><a href="index.html#Journal"><span>Journal</span></a>
+									</li>
+									<li class="menu-item"><a href="contacts.html"><span>Contacts</span></a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="mt-6">
+					<img style="position: absolute; bottom: 0%;" src="images/pattern.svg" alt="">
+				</div>
+			</header>
+			<div class="menu_mobile_overlay"></div>
+			<div class="menu_mobile scheme_dark">
+				<div class="menu_mobile_inner">
+					<a class="menu_mobile_close icon-cancel"></a>
+					<nav class="menu_mobile_nav_area">
+						<ul id="menu_mobile" class="menu_mobile_nav">
+							<li class="menu-item"><a href="index.html"><span>Home</span></a>
+							</li>
+							<li class="menu-item"><a href="about-us.html"><span>Our Story</span></a></li>
+							<li class="menu-item"><a href="shop.html"><span>Treasure Chest</span></a>
+							</li>
+							<li class="menu-item"><a href="#recipe"><span>Recipes</span></a>
+
+							</li>
+							<li class="menu-item"><a href="index.html#Journal"><span>Journal</span></a>
+
+							</li>
+							<li class="menu-item"><a href="contacts.html"><span>Contacts</span></a></li>
+							<li class="menu-item"><a href="galary.html"><span>Gallery</span></a></li>
+						</ul>
+						</li>
+						</ul>
+					</nav>
+					<div class="socials_mobile"><span class="social_item"><a href="#" target="_blank"
+								class="social_icons social_twitter"><span class="trx_addons_icon-twitter"></span></a>
+						</span><span class="social_item"><a href="#" target="_blank"
+								class="social_icons social_facebook"><span class="trx_addons_icon-facebook"></span></a>
+						</span><span class="social_item"><a href="#" target="_blank"
+								class="social_icons social_gplus"><span class="trx_addons_icon-gplus"></span></a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="page_content_wrap scheme_default  pt-6">
+				<div class="wrap">
+					<div class="content">
+						<div class="post_item_single post_type_product">
+							<nav class="woocommerce-breadcrumb"><a href="index.html">Home</a>&nbsp;&#47;&nbsp;<a
+									href="shop.html">Premium Tea</a>&nbsp;&#47; </nav>
+							<div class="product type-product has-post-thumbnail first">
+								<div class="images">
+									<a href="images/Main-page-images-01.jpg" class="woocommerce-main-image zoom"
+										title="" data-rel="prettyPhoto[product-gallery]"><img width="540" height="720"
+											src="images/Main-page-images-01.jpg" alt="Johari Tea" title="" /></a>
+									<div class="thumbnails columns-4">
+										<a href="images/35-min.jpg" class="zoom first" title=""
+											data-rel="prettyPhoto[product-gallery]"><img width="180" height="240"
+												src="images/35-min.jpg"
+												class="attachment-shop_thumbnail size-shop_thumbnail" alt="Johari tea"
+												title="" /></a>
+										<a href="images/Main-page-images-01.jpg" class="zoom last" title=""
+											data-rel="prettyPhoto[product-gallery]"><img width="180" height="240"
+												src="images/Main-page-images-01.jpg"
+												class="attachment-shop_thumbnail size-shop_thumbnail" alt="Johari tea"
+												title="" /></a>
+									</div>
+								</div>
+								<div class="summary entry-summary single-product-info">
+									<h1 class="mt-none">Johari Finest Loose Tea</h1>
+									<!-- <div>
+										<p class="price"><span class="woocommerce-Price-amount amount"><span
+													class="woocommerce-Price-currencySymbol">Kshs.</span> 300</span></p>
+									</div> -->
+									<div>
+										<p><strong>Taste & Aroma:</strong> Our Tea is a blend of Kenya's premium teas,
+											carefully hand-picked. It has a strong colour, rich taste and natural
+											flavour form the East and West of the Kenyan highlands.</p>
+									</div>
+									<form class="cart" id="product-order-form">
+										<div class="form-group sku-selector" style="margin-bottom: 1em;">
+											<select class="form-control" name="sku" id="tea-sku">
+												<option value="50g">50g</option>
+												<option value="100g"> 100g</option>
+												<option selected value="250g"> 250g</option>
+												<option value="500g"> 500g</option>
+											</select>
+										</div>
+										<div class="quantity">
+											<input type="number" step="1" id="tea-quantity" name="quantity" value="1"
+												title="Qty" class="input-text qty text" size="4" />
+										</div>
+										<input type="hidden" name="type" id="tea-type"
+											value="Johari Finest Loose Tea" />
+										<!-- <a href="details.html" class="single_add_to_cart_button button alt">Buy now</a> -->
+										<button class="single_add_to_cart_button button alt" id="order-btn"
+											type="button">Buy
+											Now</button>
+									</form>
+								</div>
+								<div class="woocommerce-tabs wc-tabs-wrapper">
+									<ul class="tabs wc-tabs">
+										<li class="description_tab">
+											<a href="#tab-description">Description</a>
+										</li>
+									</ul>
+									<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"
+										id="tab-description">
+										<h2>Product Description</h2>
+										<p>Jewels are normally found in the state of nature. Although processed and
+											mined they retain their beauty. What’s more is, finding a jewel is not an
+											easy process. One would have to mine in different areas, probably hit a dead
+											end. At Johari we aim to provide you with the highest quality tea by
+											cultivating the art of picking and homogenizing various tea types while
+											retaining tea in its authentic state. Our team is equipped to handle tea
+											maintaining health and hygiene standards while also having the right skills,
+											knowledge and environment to create the right blend.</p>
+										<p>Our name not only represents the uniqueness of our taste but embraces the
+											story of our country. Tea is the heart of Kenya. It is a way for people to
+											connect and come together – over a cup of tea. We desire to create a
+											personalized experience for everyone drinking Johari in order to bring more
+											people together and create healthy lifestyle due to the anti-oxide effect
+											contained in our tea. </p>
+									</div>
+									<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab"
+										id="tab-reviews">
+										<div id="reviews" class="woocommerce-Reviews">
+											<div id="comments">
+												<h2 class="woocommerce-Reviews-title">1 review for <span>Johari
+														Premium</span></h2>
+												<ol class="commentlist">
+													<li class="comment byuser comment-author-trx_admin bypostauthor even thread-even depth-1"
+														id="li-comment-6">
+														<div id="comment-6" class="comment_container">
+															<img alt='' src='images/avatar.jpg'
+																class='avatar avatar-60 photo' height='60' width='60' />
+															<div class="comment-text">
+																<div class="star-rating" title="Rated 5 out of 5">
+																	<span style="width:100%"><strong>5</strong>
+																		out of
+																		5</span>
+																</div>
+																<p class="meta">
+																	<strong>John Snow</strong> &ndash; <time
+																		datetime="2016-06-09T07:24:33+00:00">June
+																		2016</time>:
+																</p>
+																<div class="description">
+																	<p>Extremely tasty. It has an amazing aroma and deep
+																		brown color. Tastes like heaven.</p>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ol>
+											</div>
+											<div id="review_form_wrapper">
+												<div id="review_form">
+													<div id="respond" class="comment-respond">
+														<h3 id="reply-title" class="comment-reply-title">Add a review
+															<small><a rel="nofollow" id="cancel-comment-reply-link"
+																	href="index.html#respond"
+																	style="display:none;">Cancel reply</a></small>
+														</h3>
+														<form action="#" method="post" id="commentform"
+															class="comment-form" novalidate>
+															<p class="comment-notes"><span id="email-notes">Your email
+																	address will not be published.</span> Required
+																fields are marked <span class="required">*</span></p>
+															<p class="comment-form-rating"><label for="rating">Your
+																	Rating</label><select name="rating" id="rating"
+																	required>
+																	<option value="">Rate&hellip;</option>
+																	<option value="5">Perfect</option>
+																	<option value="4">Good</option>
+																	<option value="3">Average</option>
+																	<option value="2">Not that bad</option>
+																	<option value="1">Very Poor</option>
+																</select></p>
+															<p class="comment-form-comment"><label for="comment">Your
+																	Review <span
+																		class="required">*</span></label><textarea
+																	id="comment" name="comment" cols="45" rows="8"
+																	required></textarea></p>
+															<p class="comment-form-author"><label for="author">Name
+																	<span class="required">*</span></label> <input
+																	id="author" name="author" type="text" value=""
+																	size="30" required /></p>
+															<p class="comment-form-email"><label for="email">Email <span
+																		class="required">*</span></label> <input
+																	id="email" name="email" type="email" value=""
+																	size="30" required /></p>
+															<p class="form-submit"><input name="submit" type="submit"
+																	id="submit" class="submit" value="Submit" /> <input
+																	type='hidden' name='comment_post_ID' value='403'
+																	id='comment_post_ID' />
+																<input type='hidden' name='comment_parent'
+																	id='comment_parent' value='0' />
+															</p>
+														</form>
+													</div>
+												</div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+								<div class="related products">
+									<h2>Related Products</h2>
+									<ul class="products">
+										<li class="product type-product has-post-thumbnail column-1_3 first">
+											<div class="post_item post_layout_thumbs">
+												<div class="post_featured hover_shop">
+													<a href="product2.html">
+														<img width="360" height="480"
+															src="images/Main-page-images-04.jpg"
+															class="attachment-shop_catalog size-shop_catalog wp-post-image"
+															alt="Johari Premium Tea Bags"
+															title="Johari Premium Tea Bags" /> </a>
+													<div class="mask"></div>
+													<div class="icons">
+														<a rel="nofollow" href="#" aria-hidden="true" data-quantity="1"
+															data-product_id="401" data-product_sku=""
+															class="shop_cart icon-shopping-cart button add_to_cart_button product_type_simple ajax_add_to_cart"></a>
+														<a href="product.html" aria-hidden="true"
+															class="shop_link icon-link"></a>
+													</div>
+												</div>
+												<div class="post_data">
+													<div class="post_header entry-header">
+														<!-- <div class="post_tags product_tags"><a href="product.html"
+																rel="tag">500g</a></div> -->
+														<h3><a href="product2.html">Johari Tea Bags</a></h3>
+													</div>
+													<!-- <span class="price"><span
+															class="woocommerce-Price-amount amount"><span
+																class="woocommerce-Price-currencySymbol">Kshs.
+															</span>225</span>
+													</span> -->
+													<a rel="nofollow" href="product2.html" data-quantity="1"
+														data-product_id="401" data-product_sku=""
+														class="button product_type_simple add_to_cart_button ajax_add_to_cart">Buy
+														now</a>
+												</div>
+											</div>
+										</li>
+										<li class="product type-product has-post-thumbnail column-1_3 ">
+											<div class="post_item post_layout_thumbs">
+												<div class="post_featured hover_shop">
+													<a href="product3.html">
+														<img width="360" height="480"
+															src="images/Main-page-images-05.jpg"
+															class="attachment-shop_catalog size-shop_catalog wp-post-image"
+															alt="joahari tea" title="johari tea" /> </a>
+													<div class="mask"></div>
+													<div class="icons">
+														<a rel="nofollow" href="#" aria-hidden="true" data-quantity="1"
+															data-product_id="406" data-product_sku=""
+															class="shop_cart icon-shopping-cart button add_to_cart_button product_type_simple ajax_add_to_cart"></a>
+														<a href="product3.html" aria-hidden="true"
+															class="shop_link icon-link"></a>
+													</div>
+													<!-- <div class="product_awards"><span>Award WINNER</span></div> -->
+												</div>
+												<div class="post_data">
+													<div class="post_header entry-header">
+														<!-- <div class="post_tags product_tags"><a href="product.html"
+																rel="tag">500g</a></div> -->
+														<h3><a href="product3.html">Johari Premium Loose Tea</a></h3>
+													</div>
+													<!-- <span class="price"><span
+															class="woocommerce-Price-amount amount"><span
+																class="woocommerce-Price-currencySymbol">Kshs.
+															</span>500</span>
+													</span> -->
+													<a rel="nofollow" href="product3.html" data-quantity="1"
+														data-product_id="401" data-product_sku=""
+														class="button product_type_simple add_to_cart_button ajax_add_to_cart">Buy
+														now</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-5 ">
+				<img style="position: relative; bottom: 0%;" src="images/pattern.svg" alt="">
+			</div>
+			<footer class="site_footer_wrap scheme_dark"
+				style="background-color: #173028; z-index: 4; position: relative;">
+				<div class=" ">
+					<img style="position: relative; bottom: 0%;" src="images/pattern.svg" alt="">
+				</div>
+				<div class="scheme_dark">
+
+					<div class="logo_footer_wrap_inner">
+						<!-- <div class="menu_footer_wrap_inner">
+							<hr style="width:70%;text-align:center; border: 1px solid #e6e6e696;">
+						</div> -->
+
+						<a href="index.html"><img src="images/Group 304.svg" class="logo_footer_image footer_img"
+								alt="" />
+						</a>
+
+					</div>
+				</div>
+				<div class="footer_socials">
+					<span class="post_meta_item post_share">
+						<span
+							class="socials_wrap socials_share socials_size_tiny socials_type_block socials_dir_horizontal">
+							<span class="social_items ">
+								<span class="social_item">
+									<a class="social_twitter">
+										<span class="trx_addons_icon-twitter"></span>
+									</a>
+								</span>
+								<span class="social_item">
+									<a class="social_facebook" data-link="#" data-count="facebook">
+										<span class="trx_addons_icon-facebook"></span>
+									</a>
+								</span>
+								<span class="social_item">
+									<a class="social_gplus" data-link="#" data-count="gplus">
+										<span class="trx_addons_icon-gplus"></span>
+									</a>
+								</span>
+								<span class="social_item">
+									<a class="social_tumblr" data-link="#" data-count="tumblr">
+										<span class="trx_addons_icon-tumblr"></span>
+									</a>
+								</span>
+								<span class="social_item">
+									<a class="social_mail" data-link="#" data-count="mail">
+										<span class="trx_addons_icon-mail"></span>
+									</a>
+								</span>
+							</span>
+						</span>
+					</span>
+				</div>
+
+				<div class="menu_footer_wrap scheme_dark">
+					<div class="menu_footer_wrap_inner">
+						<nav class="menu_footer_nav_area">
+							<ul id="menu_footer" class="menu_footer_nav">
+								<li class="menu-item menu-item-677"><a href="about-us.html"><span>Our Story</span></a>
+								</li>
+								<li class="menu-item menu-item-147"><a href="shop.html"><span>Treasure Chest</span></a>
+								</li>
+								<li class="menu-item menu-item-675"><a href="https://www.youtube.com/c/NairobiKitchen"
+										target="_blank"><span>Recipes</span></a></li>
+								<li class="menu-item menu-item"><a href="contacts.html"><span>Contacts</span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-677"><a href="wine-list.html"><span></span></a></li>
+								<li class="menu-item menu-item-676"><a href="JavaScript:void(0)"><span>@2022 JOHARITEA
+											LTD</span></a></li>
+							</ul>
+
+						</nav>
+					</div>
+				</div>
+
+			</footer>
+		</div>
+	</div>
+
+	<script type='text/javascript' src='js/vendor/jquery.js'></script>
+	<script type='text/javascript' src='js/vendor/jquery-migrate.min.js'></script>
+
+	<script type="text/javascript">
+		// Get the modal
+		var modal = document.getElementById("buy-modal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("order-btn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		// btn.onclick = function () {
+		// 	modal.style.display = "block";
+		// }
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+
+		jQuery('#order-btn').on('click', function (event) {
+			event.preventDefault();
+			jQuery('#product-quantity-label').text(jQuery("#tea-quantity").val());
+			jQuery('#product-type-label').text(jQuery("#tea-type").val());
+			jQuery('#buy-modal').fadeIn();
+		});
+
+		jQuery('#order-details').submit(function (event) {
+			event.preventDefault();
+
+			var orderForm = jQuery("#product-order-form").serializeArray();
+			var detailsForm = jQuery('#order-details').serializeArray();
+			let postData = orderForm.concat(detailsForm);
+			postData2 = JSON.stringify(postData);
+			// 			console.log(postData2); 
+			jQuery('#submit-order').hide();
+			jQuery('#submit-loading').show();
+			jQuery.ajax({
+				method: 'POST',
+				url: 'new_sale.php',
+				data: { data: postData }
+			}).done(function (data, status) {
+				let res = JSON.parse(data);
+				jQuery('#submit-order').show();
+				jQuery('#submit-loading').hide();
+				if (res[1] == 200) {
+					jQuery('#order-detailsmodal').fadeOut();
+					jQuery('#order-received').fadeIn();
+				} else {
+
+				}
+				console.log(status);
+			});
+
+			// 			jQuery.post("new_sale.php", { data: postData }, function (data, status) {
+			// 				console.log(data);
+			// 			});
+		});
+	</script>
+
+	<script type='text/javascript' src='js/vendor/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js'></script>
+	<script type='text/javascript' src='js/vendor/plugins/trx_addons/js/trx_addons.js'></script>
+	<script type='text/javascript'
+		src='js/vendor/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min.js'></script>
+	<script type='text/javascript'
+		src='js/vendor/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.init.min.js'></script>
+	<script type='text/javascript'
+		src='js/vendor/plugins/woocommerce/assets/js/frontend/single-product.min.js'></script>
+	<script type='text/javascript'
+		src='js/vendor/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js'></script>
+	<script type='text/javascript' src='js/vendor/plugins/woocommerce/assets/js/frontend/woocommerce.min.js'></script>
+	<script type='text/javascript'
+		src='js/vendor/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js'></script>
+	<script type='text/javascript'
+		src='js/vendor/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js'></script>
+	<script type='text/javascript' src='js/vendor/ui/widget.min.js'></script>
+	<script type='text/javascript' src='js/vendor/ui/tabs.min.js'></script>
+	<script type='text/javascript' src='js/__scripts.js'></script>
+	<script type='text/javascript' src='js/custom/custom.js'></script>
+	<a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
+	<script defer
+		src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+		integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+		data-cf-beacon='{"rayId":"71c25f414cf5cb7b","token":"dab7be3e6ab04952b40d6c8e93f6cc2a","version":"2022.6.0","si":100}'
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
